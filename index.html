@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let age = confirm("Are you over 18?");
+        let wakeUpTime;
+
+        if (age === false) {
+            alert("You are not allowed to pass the quiz!");
+
+        } else {
+            wakeUpTime = +prompt("What time do you wake up?", "");
+
+            if (Number.isNaN(wakeUpTime)) {
+                alert("Incorrect input! Try again");
+
+            } else {
+                if (wakeUpTime > 0 && wakeUpTime <= 5) {
+                    alert("It's too early!!");
+                } else if (wakeUpTime > 5 && wakeUpTime <= 8) {
+                    alert("It's still early!");
+                } else if (wakeUpTime > 8 && wakeUpTime <= 11) {
+                    alert("It's normal :)");
+                } else if (wakeUpTime > 11 && wakeUpTime <= 14) {
+                    alert("It's too late!");
+                } else if (wakeUpTime > 14 && wakeUpTime <= 24) {
+                    alert("It's very very late!!");
+                } else if (wakeUpTime <= 0 || wakeUpTime > 24) {
+                    alert("You need to learn how to work with the clock!");
+                }
+            }
+        }
+    </script>
+</body>
+</html>
